@@ -8,7 +8,7 @@ public class Test02 {
 
         options.addOption(new Option("a", "first option without value, not mandatory"));
         options.addOption(new Option("b", false,"second option without value, not mandatory"));
-        options.addOption(new Option("c", false,"third option with value, not mandatory"));
+        options.addOption(new Option("c", true,"third option with value, not mandatory"));
 
 
 
@@ -37,7 +37,7 @@ public class Test02 {
         }
 
         if (cmd.hasOption("c")) {
-            String value = cmd.getOptionValue("c");
+            String value = cmd.getOptionValue('c');
             System.out.println("Podałeś opcję 'c' z wartością " + value);
         } else {
             System.out.println("Nie podałeś opcji 'c'");
