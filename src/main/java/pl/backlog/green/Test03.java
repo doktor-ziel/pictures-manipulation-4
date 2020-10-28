@@ -2,13 +2,14 @@ package pl.backlog.green;
 
 import org.apache.commons.cli.*;
 
-public class Test02 {
+public class Test03 {
     public static void main(String[] args) {
         Options options = new Options();
 
         options.addOption(new Option("a", "first option without value, not mandatory"));
         options.addOption(new Option("b", false,"second option without value, not mandatory"));
         options.addOption(new Option("c", true,"third option with value, not mandatory"));
+        options.addOption(new Option("h", "help", false, "prints usage help"));
 
         CommandLineParser parser = new DefaultParser();
         HelpFormatter help = new HelpFormatter();
@@ -18,8 +19,13 @@ public class Test02 {
             cmd = parser.parse(options, args);
         } catch (ParseException e) {
             System.out.println(e.getMessage());
-            help.printHelp("Test02", options);
+            help.printHelp("Test03", options);
             System.exit(1);
+        }
+
+        if (cmd.hasOption("h")) {
+            help.printHelp("Test03", options);
+            System.exit(0);
         }
 
         if (cmd.hasOption("a")) {
