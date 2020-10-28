@@ -10,8 +10,6 @@ public class Test02 {
         options.addOption(new Option("b", false,"second option without value, not mandatory"));
         options.addOption(new Option("c", true,"third option with value, not mandatory"));
 
-
-
         CommandLineParser parser = new DefaultParser();
         HelpFormatter help = new HelpFormatter();
         CommandLine cmd = null;
