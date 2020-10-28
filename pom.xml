@@ -43,6 +43,13 @@
               <goal>single</goal>
             </goals>
             <configuration>
+              <archive>
+                <manifest>
+                  <mainClass>
+                    pl.backlog.green.Watermak
+                  </mainClass>
+                </manifest>
+              </archive>
               <descriptorRefs>
                 <descriptorRef>jar-with-dependencies</descriptorRef>
               </descriptorRefs>
