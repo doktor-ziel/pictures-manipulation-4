@@ -29,5 +29,18 @@ public class Test02 {
         } else {
             System.out.println("Nie podałeś opcji 'a'");
         }
+
+        if (cmd.hasOption("b")) {
+            System.out.println("Podałeś opcję 'b'");
+        } else {
+            System.out.println("Nie podałeś opcji 'b'");
+        }
+
+        if (cmd.hasOption("c")) {
+            String value = cmd.getOptionValue("c");
+            System.out.println("Podałeś opcję 'c' z wartością " + value);
+        } else {
+            System.out.println("Nie podałeś opcji 'c'");
+        }
     }
 }
